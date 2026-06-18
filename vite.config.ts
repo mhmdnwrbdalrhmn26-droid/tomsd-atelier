@@ -7,7 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  build: {
-    outDir: 'dist', // تأكد أن المخرج هو dist
-  }
 });
