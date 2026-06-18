@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account registration and custom tailor profiles",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "tier": { "type": "string" },
+        "joinedDate": { "type": "string" },
+        "authProvider": { "type": "string" },
+        "googleAvatar": { "type": "string" }
+      },
+      "required": ["email", "fullName"]
+    },
+    "Order": {
+      "title": "Product Order",
+      "description": "Custom tailor fit clothing orders and delivery trackers",
+      "type": "object",
+      "properties": {
+        "orderId": { "type": "string" },
+        "userId": { "type": "string" },
+        "trackingId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string" },
+        "placedAt": { "type": "string" }
+      },
+      "required": ["trackingId", "customerName", "items", "totalAmount"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Customer accounts and measurements"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Historic tailor-made clothing orders"
+    }
+  }
+}

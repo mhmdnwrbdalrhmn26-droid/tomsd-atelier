@@ -1,0 +1,8 @@
+{
+  "name": "tomsd-atelier-v2",
+  "description": "A high-end, world-class minimalist e-commerce destination with advanced filtering, cross-selling, one-step checkout, and an in-app AR preview feature.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
